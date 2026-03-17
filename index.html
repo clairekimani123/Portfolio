@@ -1,344 +1,1037 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Stack Developer Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-        }
-        
-        .contact-links {
-            margin-top: 1.5rem;
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .contact-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1.5rem;
-            background: rgba(255,255,255,0.2);
-            border-radius: 25px;
-            transition: all 0.3s;
-        }
-        
-        .contact-links a:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        section {
-            background: white;
-            margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        h2 {
-            color: #667eea;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.5rem;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .skill-category h3 {
-            color: #764ba2;
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-        }
-        
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        
-        .skill-tag {
-            background: #f0f4ff;
-            color: #667eea;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        
-        .projects-grid {
-            display: grid;
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-        
-        .project-card {
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: all 0.3s;
-        }
-        
-        .project-card:hover {
-            border-color: #667eea;
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(102,126,234,0.2);
-        }
-        
-        .project-card h3 {
-            color: #333;
-            margin-bottom: 0.8rem;
-            font-size: 1.3rem;
-        }
-        
-        .project-card p {
-            color: #666;
-            margin-bottom: 1rem;
-        }
-        
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        
-        .tech-badge {
-            background: #667eea;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
-        }
-        
-        .experience-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-        
-        .experience-item h3 {
-            color: #333;
-            font-size: 1.3rem;
-            margin-bottom: 0.3rem;
-        }
-        
-        .experience-item .role {
-            color: #764ba2;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .experience-item .period {
-            color: #888;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .experience-item ul {
-            margin-left: 1.5rem;
-        }
-        
-        .experience-item li {
-            margin-bottom: 0.5rem;
-            color: #555;
-        }
-        
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Claire Kimani — Frontend Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy2: #112240;
+    --navy3: #1d3461;
+    --gold: #c9a84c;
+    --gold2: #e8c97a;
+    --white: #f0f4ff;
+    --muted: #8892b0;
+    --accent: #4fc3f7;
+    --card-bg: #112240;
+    --border: rgba(201,168,76,0.2);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* CUSTOM CURSOR */
+  .cursor {
+    width: 10px; height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+  }
+  .cursor-ring {
+    width: 36px; height: 36px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.15s ease;
+    opacity: 0.6;
+  }
+
+  /* NOISE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background: rgba(10, 22, 40, 0.85);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0; right: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 0.78rem;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s ease forwards;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.4); }
+  }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--white);
+    opacity: 0;
+    animation: fadeUp 0.8s 0.4s ease forwards;
+  }
+  .hero-name span { color: var(--gold); }
+  .hero-title {
+    font-size: 1.15rem;
+    color: var(--muted);
+    font-weight: 300;
+    margin: 20px 0 32px;
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.6s ease forwards;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.8s ease forwards;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    border: none;
+    cursor: none;
+  }
+  .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,168,76,0.3); }
+  .btn-outline {
+    background: transparent;
+    color: var(--gold);
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    border: 1px solid var(--gold);
+    cursor: none;
+  }
+  .btn-outline:hover { background: rgba(201,168,76,0.1); transform: translateY(-2px); }
+
+  /* HERO VISUAL */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1.2s 1s ease forwards;
+  }
+  .hero-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--accent), var(--gold));
+  }
+  .code-line {
+    font-family: 'Courier New', monospace;
+    font-size: 0.82rem;
+    line-height: 2;
+    color: var(--muted);
+  }
+  .code-line .kw { color: #c792ea; }
+  .code-line .fn { color: var(--accent); }
+  .code-line .str { color: #c3e88d; }
+  .code-line .num { color: var(--gold); }
+  .code-line .cm { color: #546e7a; font-style: italic; }
+
+  /* STATS */
+  .stats-row {
+    display: flex;
+    gap: 32px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    opacity: 0;
+    animation: fadeUp 0.8s 1s ease forwards;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+  }
+  .stat-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* SCROLL INDICATOR */
+  .scroll-ind {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s ease forwards;
+  }
+  .scroll-ind span { font-size: 0.7rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+  .scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollAnim 2s infinite;
+  }
+  @keyframes scrollAnim {
+    0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
+    50% { opacity: 1; transform: scaleY(1); }
+    100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* SECTIONS */
+  section { padding: 100px 60px; position: relative; z-index: 1; }
+  .section-label {
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .section-subtitle { color: var(--muted); font-size: 1rem; line-height: 1.7; max-width: 560px; }
+  .section-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 20px 0 60px;
+  }
+  .max-w { max-width: 1200px; margin: 0 auto; }
+
+  /* ABOUT */
+  #about { background: var(--navy2); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .about-text { color: var(--muted); line-height: 1.9; font-size: 0.95rem; }
+  .about-text p { margin-bottom: 20px; }
+  .about-text strong { color: var(--white); }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .skill-group {
+    background: var(--navy);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .skill-group:hover { border-color: var(--gold); transform: translateY(-4px); }
+  .skill-group-title {
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill-tag {
+    background: rgba(201,168,76,0.08);
+    color: var(--muted);
+    font-size: 0.78rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(201,168,76,0.15);
+    transition: all 0.2s;
+  }
+  .skill-tag:hover { color: var(--gold); border-color: var(--gold); }
+
+  /* PROJECTS */
+  #projects { background: var(--navy); }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+    group: true;
+  }
+  .project-card:hover { border-color: var(--gold); transform: translateY(-8px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
+  .project-card.featured { grid-column: span 2; }
+  .project-banner {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .project-card.featured .project-banner { height: 260px; }
+  .banner-hopeconnect { background: linear-gradient(135deg, #1e3a5f 0%, #1a237e 50%, #4a148c 100%); }
+  .banner-jobtrack { background: linear-gradient(135deg, #0d2137 0%, #0a3d62 50%, #1565c0 100%); }
+  .banner-carelink { background: linear-gradient(135deg, #1b2838 0%, #1a3a4a 50%, #006064 100%); }
+  .banner-smiles { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+  .banner-icon {
+    font-size: 4rem;
+    opacity: 0.15;
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+  }
+  .banner-label {
+    position: absolute;
+    top: 20px; left: 24px;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+  }
+  .banner-main-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.12);
+    letter-spacing: -1px;
+    text-align: center;
+  }
+  .project-card.featured .banner-main-text { font-size: 4rem; }
+  .project-body { padding: 32px; }
+  .project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .project-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; }
+  .project-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .stack-tag {
+    background: rgba(79,195,247,0.08);
+    color: var(--accent);
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(79,195,247,0.2);
+    font-family: 'Courier New', monospace;
+  }
+  .project-links { display: flex; gap: 12px; }
+  .proj-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--gold);
+    font-size: 0.82rem;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  .proj-link:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+  .coming-soon-badge {
+    background: rgba(201,168,76,0.1);
+    color: var(--gold);
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    letter-spacing: 1px;
+  }
+
+  /* EXPERIENCE */
+  #experience { background: var(--navy2); }
+  .timeline { position: relative; padding-left: 32px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+  .timeline-item { position: relative; margin-bottom: 56px; }
+  .timeline-dot {
+    position: absolute;
+    left: -37px;
+    top: 6px;
+    width: 10px; height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    border: 2px solid var(--navy2);
+    box-shadow: 0 0 0 4px rgba(201,168,76,0.2);
+  }
+  .timeline-date {
+    font-size: 0.75rem;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .timeline-role {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .timeline-company { color: var(--muted); font-size: 0.9rem; margin-bottom: 16px; }
+  .timeline-points { list-style: none; }
+  .timeline-points li {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  .timeline-points li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.7rem;
+    top: 3px;
+  }
+
+  /* CONTACT */
+  #contact { background: var(--navy); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .contact-info { }
+  .contact-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+  .contact-tagline span { color: var(--gold); }
+  .contact-items { display: flex; flex-direction: column; gap: 20px; }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .contact-icon {
+    width: 44px; height: 44px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; }
+  .form-label { font-size: 0.78rem; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+  .form-input, .form-textarea {
+    background: var(--navy2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+    cursor: none;
+  }
+  .form-input:focus, .form-textarea:focus { border-color: var(--gold); }
+  .form-textarea { resize: vertical; min-height: 120px; }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy2);
+    border-top: 1px solid var(--border);
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+  }
+  .footer-text { color: var(--muted); font-size: 0.82rem; }
+  .social-links { display: flex; gap: 16px; }
+  .social-link {
+    width: 38px; height: 38px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    cursor: none;
+  }
+  .social-link:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.12); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* BG DECORATION */
+  .bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .orb-1 { width: 500px; height: 500px; background: rgba(201,168,76,0.04); top: -100px; right: -100px; }
+  .orb-2 { width: 300px; height: 300px; background: rgba(79,195,247,0.04); bottom: 100px; left: -50px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { gap: 20px; }
+    #hero { padding: 0 24px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-visual { display: none; }
+    section { padding: 70px 24px; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; }
+    .skills-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 20px; text-align: center; }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Claire Kimani</h1>
-        <p>Full Stack Developer | React • Python • Cloud Architecture</p>
-        <div class="contact-links">
-            <a href="kimaniclaire3@gmail.com">📧 Email</a>
-            <a href="tel:+254717793977">📱 Phone</a>
-            <a href="https://github.com/clairekimani123" target="_blank">💻 GitHub</a>
-            <a href="https://www.linkedin.com/in/claire-kimani-1a5a922b8/" target="_blank">🔗 LinkedIn</a>
-        </div>
-    </header>
 
-    <div class="container">
-        <section>
-            <h2>About Me</h2>
-            <p>Full-stack developer with 2 years of experience building scalable web applications and cloud-based solutions. I specialize in modern JavaScript frameworks, backend architectures, and client-facing technical leadership. I'm passionate about writing clean code, solving complex problems, and delivering products that users love.</p>
-            <p style="margin-top: 1rem;">Native English Speaker • Available for Remote Work</p>
-        </section>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-        <section>
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Vuejs</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Redux</span>
-                        
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">PHP/Laravel</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">Flask</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Database & Cloud</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MYSQL</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">CI/CD</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Other</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">Nginx</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Agile/Scrum</span>
-                        <span class="skill-tag">AI Integration</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">CK</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-        <section>
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>E-Commerce Platform</h3>
-                    <p>Built a full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard. </p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Next.js</span>
-                        <span class="tech-badge">Node.js</span>
-                        <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">Stripe</span>
-                     
-                    </div>
-                </div>
-                
-               
-                <div class="project-card">
-                    <h3>Healthcare Patient Portal</h3>
-                    <p>Created a HIPAA-compliant patient management system with appointment scheduling, telemedicine integration, and secure messaging. Served  patients across multiple clinics.</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">React</span>
-                        <span class="tech-badge">Django</span>
-                        <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">Netlify</span>
-                    </div>
-                </div>
-                
-               
-            </div>
-        </section>
-
-        <section>
-            <h2>Professional Experience</h2>
-            
-            <div class="experience-item">
-                <h3>Junior Full Stack Developer</h3>
-                <div class="role">Content Aggregation Limited</div>
-                <div class="period">2024 - Present</div>
-                <ul>
-                    <li>Led development of multiple client-facing applications using React, Node.js</li>
-                    <li>Architected scalable microservices handling 100K+ requests per day</li>
-                    <li>Mentored junior developers and conducted code reviews to maintain code quality</li>
-                    <li>Collaborated directly with clients to gather requirements and provide technical guidance</li>
-                    <li>Reduced deployment time by 50% through CI/CD pipeline optimization</li>
-                </ul>
-            </div>
-            
-           
-        </section>
-
-        <section>
-            <h2>Why Work With Me</h2>
-            <ul style="margin-left: 1.5rem; color: #555;">
-                <li style="margin-bottom: 0.8rem;"><strong>Client-First Approach:</strong> I excel at translating business requirements into technical solutions and communicating complex concepts clearly to non-technical stakeholders.</li>
-                <li style="margin-bottom: 0.8rem;"><strong>Fast & Reliable:</strong> Known for quick turnarounds, meeting deadlines, and being highly responsive to team and client needs.</li>
-                <li style="margin-bottom: 0.8rem;"><strong>Modern Stack Expertise:</strong> Deep experience with React, Node.js, and cloud platforms—exactly what VerveSoft specializes in.</li>
-                <li style="margin-bottom: 0.8rem;"><strong>Leadership Ready:</strong> Looking to grow into technical leadership while delivering hands-on engineering excellence.</li>
-                <li style="margin-bottom: 0.8rem;"><strong>Long-Term Mindset:</strong> Interested in building lasting partnerships and growing with the right team.</li>
-            </ul>
-        </section>
+<!-- HERO -->
+<section id="hero">
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-tag">Available for opportunities</div>
+      <h1 class="hero-name">Claire<br/><span>Kimani</span></h1>
+      <p class="hero-title">Full-Stack Software Developer crafting<br/>clean interfaces and scalable systems.<br/>Based in <strong style="color:var(--white)">Nairobi, Kenya.</strong></p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Projects</span></div>
+        <div class="stat"><span class="stat-num">1+</span><span class="stat-label">Years Exp.</span></div>
+        <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Technologies</span></div>
+      </div>
     </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="code-line"><span class="cm">// Claire Kimani — Developer</span></div>
+        <div class="code-line"><span class="kw">const</span> developer = {</div>
+        <div class="code-line">&nbsp;&nbsp;name: <span class="str">"Claire Kimani"</span>,</div>
+        <div class="code-line">&nbsp;&nbsp;role: <span class="str">"Full-Stack Developer"</span>,</div>
+        <div class="code-line">&nbsp;&nbsp;location: <span class="str">"Nairobi, Kenya"</span>,</div>
+        <div class="code-line">&nbsp;&nbsp;stack: [<span class="str">"React"</span>, <span class="str">"Flask"</span>,</div>
+        <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"PostgreSQL"</span>, <span class="str">"TailwindCSS"</span>],</div>
+        <div class="code-line">&nbsp;&nbsp;available: <span class="num">true</span>,</div>
+        <div class="code-line">};</div>
+        <div class="code-line" style="margin-top:12px"><span class="cm">// Open to new opportunities ✓</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-ind">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Your Name. Available for remote opportunities in the US/Canada.</p>
-        <p style="margin-top: 0.5rem; opacity: 0.8;">Let's build something great together.</p>
-    </footer>
+<!-- ABOUT -->
+<section id="about">
+  <div class="max-w">
+    <div class="reveal">
+      <p class="section-label">Who I Am</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="about-text">
+          <p>I'm a <strong>full-stack software developer</strong> with a passion for building applications that are not just functional, but genuinely delightful to use. I graduated from Moringa School's Software Engineering program and I have finished my attachment as a <strong>Backend Developer Intern</strong> at Content Aggregation Limited in Nairobi.</p>
+          <p>My journey into tech started with curiosity and a drive to solve real problems. I've built and deployed production applications ranging from <strong>NGO fundraising platforms</strong> to <strong>AI-powered job trackers</strong> — each one teaching me something new about clean code, good architecture, and user-centred design.</p>
+          <p>I'm comfortable across the full stack — from React frontends and TailwindCSS interfaces to Flask APIs, PostgreSQL databases, and cloud deployments. I'm currently deepening my expertise in <strong>TypeScript</strong> and <strong>cloud infrastructure.</strong></p>
+          <p>When I'm not coding, I'm learning — whether that's a new framework, a new tool, or a new concept. I believe the best developers never stop being students.</p>
+        </div>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <div class="skill-group-title">Frontend</div>
+          <div class="skill-tags">
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">TailwindCSS</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">Angular.js</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Backend</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">REST APIs</span>
+             <span class="skill-tag">Php/Laravel</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Database & Auth</div>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Firebase Auth</span>
+            <span class="skill-tag">JWT</span>
+            <span class="skill-tag">OAuth 2.0</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">DevOps & Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub Actions</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">Nginx</span>
+            <span class="skill-tag">GA4</span>
+            <span class="skill-tag">Render</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="max-w">
+    <div class="reveal">
+      <p class="section-label">What I've Built</p>
+      <h2 class="section-title">Projects</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="projects-grid">
+
+      <!-- HOPECONNECT — FEATURED -->
+      <div class="project-card featured reveal">
+        <div class="project-banner banner-hopeconnect">
+          <div class="banner-label">Featured Project</div>
+          <div class="banner-main-text">HopeConnect</div>
+          <div class="banner-icon">🌍</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">HopeConnect — Digital Fundraising Platform</h3>
+          <p class="project-desc">A full-stack NGO fundraising platform connecting donors with causes. Features secure Google OAuth + JWT authentication, role-based access control (donor/admin), Google Analytics 4 event tracking, donation management with M-Pesa integration (in progress), and a complete admin dashboard for NGO campaign management.</p>
+          <div class="project-stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">TailwindCSS</span>
+            <span class="stack-tag">Flask</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">Firebase Auth</span>
+            <span class="stack-tag">Google Analytics 4</span>
+            <span class="stack-tag">Vercel</span>
+            <span class="stack-tag">Render</span>
+          </div>
+          <div class="project-links">
+            <a href="https://hopeconnect-ngo.vercel.app" target="_blank" class="proj-link">↗ Live Demo</a>
+            <a href="https://github.com/clairekimani123/HOPECONNECT-NGO" target="_blank" class="proj-link">⌥ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- JOBTRACK AI -->
+      <div class="project-card reveal">
+        <div class="project-banner banner-jobtrack">
+          <div class="banner-label">In Development</div>
+          <div class="banner-main-text">JobTrackAI</div>
+          <div class="banner-icon">🤖</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">JobTrackAI — AI-Powered Application Tracker</h3>
+          <p class="project-desc">An intelligent job application management system with AI-driven resume analysis. Compares CVs against job descriptions, suggests improvements, and visualises the application pipeline with follow-up reminders.</p>
+          <div class="project-stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">TypeScript</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">OpenAI API</span>
+            <span class="stack-tag">TailwindCSS</span>
+          </div>
+          <div class="project-links">
+            <span class="coming-soon-badge">🚧 Deploying Soon</span>
+            <a href="https://github.com/clairekimani123/JOBTRACKERAI" target="_blank" class="proj-link">⌥ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMILES CULTURE -->
+      <div class="project-card reveal">
+        <div class="project-banner banner-smiles">
+          <div class="banner-label">E-Commerce</div>
+          <div class="banner-main-text">SmilesCulture</div>
+          <div class="banner-icon">🛍️</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">SmilesCulture — E-Commerce Platform</h3>
+          <p class="project-desc">A modern e-commerce platform with product catalogue, shopping cart, order management, and payment integration. Built with a focus on clean UX and mobile-first responsive design.</p>
+          <div class="project-stack">
+            <span class="stack-tag">React</span>
+            <span class="stack-tag">TailwindCSS</span>
+            <span class="stack-tag">Node.js</span>
+            <span class="stack-tag">PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <span class="coming-soon-badge">🚧 Deploying Soon</span>
+            <a href="https://github.com/clairekimani123/Smiles-culture" target="_blank" class="proj-link">⌥ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARELINK -->
+      <div class="project-card reveal">
+        <div class="project-banner banner-carelink">
+          <div class="banner-label">Marketplace</div>
+          <div class="banner-main-text">CareLink</div>
+          <div class="banner-icon">🏥</div>
+        </div>
+        <div class="project-body">
+          <h3 class="project-title">CareGiver-App — Caregiver Marketplace</h3>
+          <p class="project-desc">A platform connecting patients with qualified healthcare assistants. Features profile browsing with specialty and location filters, booking workflows, real-time search, and responsive cross-device design — built with pure vanilla JavaScript.</p>
+          <div class="project-stack">
+            <span class="stack-tag">HTML5</span>
+            <span class="stack-tag">CSS3</span>
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">Local Storage API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/clairekimani123/Caregiver--app" target="_blank" class="proj-link">⌥ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="max-w">
+    <div class="reveal">
+      <p class="section-label">My Journey</p>
+      <h2 class="section-title">Experience & Education</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">August 2025 — Present</div>
+        <div class="timeline-role">Backend Developer Intern</div>
+        <div class="timeline-company">Content Aggregation Limited · Nairobi, Kenya</div>
+        <ul class="timeline-points">
+          <li>Architect and implement backend features for content aggregation systems serving thousands of daily users</li>
+          <li>Manage server deployment and SSL configuration using Nginx including load balancing</li>
+          <li>Optimise database query performance and implement efficient schema designs</li>
+          <li>Collaborate with frontend teams integrating RESTful APIs and participate in Agile code reviews</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2025 — Present</div>
+        <div class="timeline-role">Software Engineering Intensive</div>
+        <div class="timeline-company">Moringa School · Nairobi, Kenya</div>
+        <ul class="timeline-points">
+          <li>Comprehensive full-stack training: React, Flask, Django, Node.js, PostgreSQL, REST APIs</li>
+          <li>Agile/Scrum methodology, TDD, CI/CD with GitHub Actions, cloud deployments</li>
+          <li>Built and deployed multiple production applications serving real users</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">May — June 2024</div>
+        <div class="timeline-role">Professional Healthcare Assistant</div>
+        <div class="timeline-company">St. Matia Mulumba Mission Hospital · Nairobi, Kenya</div>
+        <ul class="timeline-points">
+          <li>Developed strong communication, attention to detail, and protocol-following skills in a high-pressure environment — qualities I bring directly to software development</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="max-w">
+    <div class="reveal">
+      <p class="section-label">Let's Talk</p>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="contact-tagline">Ready to build something <span>meaningful</span> together?</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <span>kimaniclaire3@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <span>+254 717 793 977</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <span>Nairobi, Kenya</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💻</div>
+            <span>github.com/clairekimani123</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" placeholder="your name"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="name@company.com"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Tell me about the opportunity..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;text-align:center;border:none;padding:16px;">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Claire Kimani</div>
+  <div class="footer-text">© 2026 · Built with passion in Nairobi</div>
+  <div class="social-links">
+    <a href="https://github.com/clairekimani123" target="_blank" class="social-link" title="GitHub">GH</a>
+    <a href="mailto:kimaniclaire3@gmail.com" class="social-link" title="Email">✉</a>
+  </div>
+</footer>
+
+<script>
+  // CURSOR
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cursor.style.left = mx - 5 + 'px';
+    cursor.style.top = my - 5 + 'px';
+  });
+  function animateRing() {
+    rx += (mx - rx - 18) * 0.12;
+    ry += (my - ry - 18) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // SCROLL REVEAL
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // NAV ACTIVE STATE
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 200) current = s.getAttribute('id');
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+    });
+  });
+</script>
 </body>
 </html>
