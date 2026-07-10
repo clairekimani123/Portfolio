@@ -785,7 +785,7 @@
     </div>
     <div class="projects-grid">
 
-      <!-- HOPECONNECT — FEATURED -->
+   <!-- HOPECONNECT — FEATURED -->
       <div class="project-card featured reveal">
         <div class="project-banner banner-hopeconnect">
           <div class="banner-label">Featured Project</div>
@@ -794,16 +794,15 @@
         </div>
         <div class="project-body">
           <h3 class="project-title">HopeConnect — Digital Fundraising Platform</h3>
-          <p class="project-desc">A full-stack NGO fundraising platform connecting donors with causes. Features secure Google OAuth + JWT authentication, role-based access control (donor/admin), Google Analytics 4 event tracking, donation management with M-Pesa integration (in progress), and a complete admin dashboard for NGO campaign management.</p>
+          <p class="project-desc">A full-stack NGO platform featuring a secure asynchronous M-Pesa Daraja payment lifecycle state machine (pending/completed/failed) tracking webhooks natively. Optimized with an automated client-side dashboard polling architecture to display live transactions, secure deployment database seeders, and explicitly controlled bi-directional model serialization boundaries to eliminate recursive database overhead.</p>
           <div class="project-stack">
-            <span class="stack-tag">React</span>
-            <span class="stack-tag">TailwindCSS</span>
             <span class="stack-tag">Flask</span>
+            <span class="stack-tag">React</span>
             <span class="stack-tag">PostgreSQL</span>
+            <span class="stack-tag">SQLAlchemy</span>
+            <span class="stack-tag">M-Pesa Daraja API</span>
             <span class="stack-tag">Firebase Auth</span>
-            <span class="stack-tag">Google Analytics 4</span>
-            <span class="stack-tag">Vercel</span>
-            <span class="stack-tag">Render</span>
+            <span class="stack-tag">TailwindCSS</span>
           </div>
           <div class="project-links">
             <a href="https://hopeconnect-ngo.vercel.app" target="_blank" class="proj-link">↗ Live Demo</a>
@@ -861,7 +860,7 @@
       </div>
 
 
-      <!-- DocuAsk UI -->
+  <!-- DocuAsk UI -->
       <div class="project-card reveal">
         <div class="project-banner banner-docuask">
           <div class="banner-label">RAG-chatbot</div>
@@ -870,14 +869,14 @@
         </div>
         <div class="project-body">
           <h3 class="project-title">DocuAsk UI — AI Document Assistant</h3>
-          <p class="project-desc">An AI document assistant that lets users upload files and have streaming, context-aware conversations about their content.</p>
+          <p class="project-desc">A single-page RAG application enabling live, context-aware conversations with uploaded documents. Engineered using the native Fetch API and ReadableStream to parse Server-Sent Events (SSE) for token-by-token UI rendering, supported by an instant client-side theme system leveraging local state and custom CSS variables.</p>
           <div class="project-stack">
-            <span class="stack-tag">React</span>
+            <span class="stack-tag">React 18</span>
             <span class="stack-tag">TypeScript</span>
             <span class="stack-tag">FastAPI</span>
-            <span class="stack-tag">PostgreSQL</span>
-            <span class="stack-tag">Groq-AI</span>
-            <span class="stack-tag">StyleCss</span>
+            <span class="stack-tag">Server-Sent Events</span>
+            <span class="stack-tag">ReadableStream</span>
+            <span class="stack-tag">Vite</span>
           </div>
           <div class="project-links">
             <a href="https://ducoask.vercel.app" target="_blank" class="proj-link">↗ Live Demo</a>
